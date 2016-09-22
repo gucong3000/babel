@@ -424,6 +424,8 @@ export default class File extends Store {
         } else {
           throw new Error(`Couldn't find parser ${parserOpts.parser} with "parse" method relative to directory ${dirname}`);
         }
+      } else {
+        parseCode = parserOpts.parser;
       }
 
       parserOpts = Object.assign({}, this.parserOpts, parserOpts);
